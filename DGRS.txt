@@ -1,0 +1,128 @@
+Montar una unidad externa
+	sudo mkdir /media/Directorio
+	sudo mount -t ntfs /dev/sdb1 /media/Directorio
+
+Añadir repositorio a /etc/apt/sources.list
+	sudo add-apt-repository ppa:user/ppa-name
+
+Comprobar current runlevel
+	runlevel
+
+Obtener IP con DHCP (dinamic)
+	nano /etc/network/interfaces
+	auto eth0
+	iface eth0 inet dhcp
+
+Configurar IP estática
+	nano /etc/network/interfaces
+	auto eth0
+	iface eth0 inet static
+	address 192.168.0.100
+	netmask 255.255.255.0
+	gateway 192.168.0.1
+
+Ver si tienes FW activado
+	sudo ufw status
+
+Ver tablas ARP
+	cd /proc/net/arp
+
+Ver network statistics
+	cd /proc/net/netstat
+
+Info sobre la memoria del dispositivo
+	cat /proc/meminfo
+
+Lista de puertos TCP escuchando
+	nmap -P0 192.168.0.X
+
+Compilar un kernel
+	Descargar el kernel desde www.kernel.org (el tar.gz.bz2)
+	Descomprimir en /usr/src/linux-XXX
+		a. tar zxvf
+		b. tar jxvf
+	Configurar
+		a. make menuconfig
+		b. Al guardar: /usr/src/linux-XX.../.config
+	make clean
+	make zlilo o bien zImage o bien zdisk
+	make modules
+	make modules_install
+	mkinitrd (crea el fichero initrd.img)
+	Mover “vmlinuz” y System.map a /boot
+	Actualizar el fichero de arranque...
+		a. vmlinuz-XXX
+		b. initrd-XXX.img
+
+Syslog: se usa (puerto UDP 514) para enviar mensajes de eventos del sistema
+
+Demonios: procesos que se están ejecutando en el segundo plano (en /etc/init.d/)
+
+En el fichero home/etc se guardan archivos de configuración
+
+En el archivo /hosts se encuentran los nombres de host con sus diferentes IPs
+
+ifconfig muestra info sobre las interfaces
+
+dpkg para instalar/actualizar o borrar paquetes .deb
+
+tar para descomprimir
+
+adduser/userdel/usermod/groupoadd/groupdel para añadir/eliminar/modificar usuarios o grupos
+
+Para cambiar el nombre a un directorio:
+	mv /ruta/directorio /ruta/nuevoNombre
+
+Para añadir un usuario a un grupo:
+	useradd isa -m -g grupo
+
+fdisk: para manipular la tabla de particiones del disco
+
+du: para estimar el uso de espacio para archivos
+
+df: para ver el uso de espacio del disco para el file system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
