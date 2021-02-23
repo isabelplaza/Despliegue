@@ -13,6 +13,8 @@ Obtener IP con DHCP (dinamic)
 	auto eth0
 	iface eth0 inet dhcp
 
+	Para guardar /etc/network/interfaces hay que ejecutar: comando /etc/init.d/networking restart
+
 Configurar IP estática
 	nano /etc/network/interfaces
 	auto eth0
@@ -82,34 +84,9 @@ du: para estimar el uso de espacio para archivos
 
 df: para ver el uso de espacio del disco para el file system
 
+chown usuarioNuevo archivo
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+reiniciar servidor apache: sudo etc/init.d/apache2 restart
 
 
 
